@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}",
+                "/home/chao/mambaforge/envs/ros1n/include",
+                "/home/chao/mambaforge/envs/ros1n/include/eigen3",
+                "/home/chao/mambaforge/envs/ros1n/include/opencv4"
+            ],
+            "defines": [],
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}
