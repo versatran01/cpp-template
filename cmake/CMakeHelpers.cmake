@@ -141,8 +141,8 @@ endfunction()
 # )
 # cmake-format: on
 function(cc_binary)
-  cmake_parse_arguments(CC_BIN "" "NAME" "SRCS;COPTS;DEFINES;LINKOPTS;DEPS"
-                        ${ARGN})
+  cmake_parse_arguments(CC_BIN "" "NAME"
+                        "SRCS;COPTS;DEFINES;LINKOPTS;DEPS;INCDIRS" ${ARGN})
 
   if(CC_NAMESPACE)
     set(_NAME "${CC_NAMESPACE}_${CC_BIN_NAME}")
@@ -153,6 +153,7 @@ function(cc_binary)
   add_executable(${_NAME} "")
   target_sources(${_NAME} PRIVATE ${CC_BIN_SRCS})
 
+  target_include_directories(${_NAME} PUBLIC ${CC_BIN_INCDIRS})
   target_compile_options(${_NAME} PRIVATE ${CC_BIN_COPTS})
   target_compile_definitions(${_NAME} PUBLIC ${CC_BIN_DEFINES})
 

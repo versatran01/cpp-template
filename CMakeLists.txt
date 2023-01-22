@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.20)
 project(cpp)
 
+enable_language(CUDA)
+
+if(NOT DEFINED CMAKE_CUDA_STANDARD)
+  set(CMAKE_CUDA_STANDARD 17)
+  set(CMAKE_CUDA_STANDARD_REQUIRED ON)
+endif()
+
 set(PROJECT_NAMESPACE ${PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 17)
@@ -20,8 +27,11 @@ include(Sanitizers)
 enable_sanitizers(cpp_options)
 include(Ccache)
 
+find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
 find_package(GTest REQUIRED)
 find_package(benchmark REQUIRED)
 
 enable_testing()
+add_subdirectory(ext)
 add_subdirectory(src)
