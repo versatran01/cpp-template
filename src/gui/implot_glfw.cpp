@@ -70,9 +70,10 @@ int main(int, char **) {
   ImPlot::CreateContext();
   ImGuiIO &io = ImGui::GetIO();
   (void)io;
-  // io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable
-  // Keyboard Controls io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad; //
-  // Enable Gamepad Controls
+  // io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard
+  // Controls
+  io.ConfigFlags |=
+      ImGuiConfigFlags_NavEnableGamepad; // Enable Gamepad Controls
 
   // Setup Dear ImGui style
   ImGui::StyleColorsDark();
@@ -110,6 +111,12 @@ int main(int, char **) {
   bool show_demo_window = true;
   bool show_another_window = false;
   ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
+  //   ImGuiViewport *viewport = ImGui::GetMainViewport();
+  //   ImGui::SetNextWindowPos(viewport->WorkPos);
+  //   ImGui::SetNextWindowSize(viewport->WorkSize);
+  //   ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
+  //   ImGui::SetNextWindowSize(io.DisplaySize);
 
   // Main loop
   while (!glfwWindowShouldClose(window)) {

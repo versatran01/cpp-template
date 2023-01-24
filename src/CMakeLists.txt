@@ -23,3 +23,6 @@ cc_bench(
   NAME library_bench
   SRCS library_bench.cc
   DEPS cpp_library benchmark::benchmark benchmark::benchmark_main)
+
+  add_subdirectory(cuda)
+  add_subdirectory(gui)
