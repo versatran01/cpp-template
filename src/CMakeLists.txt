@@ -23,17 +23,3 @@ cc_bench(
   NAME library_bench
   SRCS library_bench.cc
   DEPS cpp_library benchmark::benchmark benchmark::benchmark_main)
-
-cc_binary(
-  NAME imgui_demo
-  SRCS imgui_glfw.cpp
-  DEPS imgui_glfw)
-
-cc_binary(
-  NAME implot_demo
-  SRCS implot_glfw.cpp
-  DEPS implot)
-
-# TODO: maybe change this to cu_binary?
-cc_binary(NAME vector_add SRCS vector_add.cu INCDIRS .)
-set_target_properties(cpp_vector_add PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
