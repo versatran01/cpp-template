@@ -26,3 +26,4 @@ target_compile_definitions(implot PUBLIC IMPLOT_DEBUG IMPLOT_DLL_EXPORT
 add_library(imnodes imnodes/imnodes.cpp)
 target_include_directories(imnodes PUBLIC imnodes)
 target_link_libraries(imnodes PUBLIC imgui_glfw)
+target_compile_definitions(imnodes PUBLIC IMGUI_DEFINE_MATH_OPERATORS)
