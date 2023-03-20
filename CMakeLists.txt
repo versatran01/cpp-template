@@ -1,5 +1,7 @@
-cmake_minimum_required(VERSION 3.20)
-project(cpp)
+cmake_minimum_required(VERSION 3.22)
+
+set(CMAKE_CUDA_ARCHITECTURES 86)
+project(cpp LANGUAGES CXX CUDA)
 
 enable_language(CUDA)
 
