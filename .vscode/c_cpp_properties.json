@@ -3,13 +3,10 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}",
-                "/home/chao/mambaforge/envs/ros1n/include",
-                "/home/chao/mambaforge/envs/ros1n/include/eigen3",
-                "/home/chao/mambaforge/envs/ros1n/include/opencv4"
+                "${workspaceFolder}/**"
             ],
-            "cStandard": "c11",
-            "cppStandard": "c++17",
+            "defines": [],
+            "compilerPath": "/home/chao/mambaforge/envs/cpp/bin/gcc",
             "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
