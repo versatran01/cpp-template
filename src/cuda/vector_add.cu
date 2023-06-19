@@ -57,7 +57,7 @@ __global__ void vectorAdd(const float *A, const float *B, float *C,
 /**
  * Host main routine
  */
-int main(void) {
+int main() {
   // Error code to check return values for CUDA calls
   cudaError_t err = cudaSuccess;
 
