@@ -1,14 +1,8 @@
-cc_binary(
-    NAME imgui_demo
-    SRCS imgui_glfw_opengl3.cpp
-    DEPS imgui_glfw_opengl3)
+add_executable(imgui_demo imgui_glfw_opengl3.cpp)
+target_link_libraries(imgui_demo PRIVATE imgui_glfw_opengl3)
 
-cc_binary(
-    NAME implot_demo
-    SRCS implot_glfw_opengl3.cpp
-    DEPS implot)
+add_executable(implot_demo implot_glfw_opengl3.cpp)
+target_link_libraries(implot_demo PRIVATE implot)
 
-cc_binary(
-    NAME imnodes_demo
-    SRCS node_editor.cpp imnodes_glfw_opengl3.cpp
-    DEPS imnodes)
+add_executable(imnodes_demo node_editor.cpp imnodes_glfw_opengl3.cpp)
+target_link_libraries(imnodes_demo PRIVATE imnodes)
