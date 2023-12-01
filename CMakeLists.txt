@@ -33,5 +33,6 @@ find_package(GTest REQUIRED)
 find_package(benchmark REQUIRED)
 
 enable_testing()
+
 add_subdirectory(ext)
 add_subdirectory(src)

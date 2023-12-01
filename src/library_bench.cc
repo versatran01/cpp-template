@@ -4,8 +4,7 @@
 
 namespace {
 
-void BM_Subtract(benchmark::State &state) {
-
+void BM_Subtract(benchmark::State& state) {
   for (auto _ : state) {
     auto x = cpp::subtract(2, 1);
     benchmark::DoNotOptimize(x);
@@ -13,4 +12,4 @@ void BM_Subtract(benchmark::State &state) {
 }
 BENCHMARK(BM_Subtract);
 
-} // namespace
+}  // namespace
