@@ -27,3 +27,10 @@ add_library(imnodes imnodes/imnodes.cpp)
 target_include_directories(imnodes PUBLIC imnodes)
 target_link_libraries(imnodes PUBLIC imgui_glfw_opengl3)
 target_compile_definitions(imnodes PUBLIC IMGUI_DEFINE_MATH_OPERATORS)
+
+# imguizmo
+add_library(imguizmo
+    ImGuizmo/GraphEditor.cpp ImGuizmo/ImCurveEdit.cpp ImGuizmo/ImGradient.cpp
+    ImGuizmo/ImGuizmo.cpp ImGuizmo/ImSequencer.cpp)
+target_include_directories(imguizmo PUBLIC ImGuizmo)
+target_link_libraries(imguizmo PUBLIC imgui_glfw_opengl3)

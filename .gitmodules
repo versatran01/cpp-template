@@ -7,3 +7,6 @@
 [submodule "ext/imnodes"]
 	path = ext/imnodes
 	url = https://github.com/Nelarius/imnodes.git
+[submodule "ext/ImGuizmo"]
+	path = ext/ImGuizmo
+	url = https://github.com/CedricGuillemet/ImGuizmo.git
